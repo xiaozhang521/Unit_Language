@@ -92,7 +92,3 @@ Run `evaluate.sh` to generate wavs according to units and make evaluations. Befo
 bash evaluate.sh
 ```
 
-## Citation
-If you found this repository useful, please consider citing this work:
-```
-```
