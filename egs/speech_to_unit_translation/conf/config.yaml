@@ -1,0 +1,19 @@
+input_channels: 1
+input_feat_per_channel: 80
+specaugment:
+  freq_mask_F: 27
+  freq_mask_N: 1
+  time_mask_N: 1
+  time_mask_T: 100
+  time_mask_p: 1.0
+  time_wrap_W: 0
+transforms:
+  '*':
+    - utterance_cmvn
+  _train:
+    - utterance_cmvn
+    - specaugment
+vocoder:
+  checkpoint: /vocoder/mhubert_vp_en_es_fr_it3_400k_layer11_km1000_lj/g_00500000
+  config: /vocoder/mhubert_vp_en_es_fr_it3_400k_layer11_km1000_lj/config.json
+  type: code_hifigan
